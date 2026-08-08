@@ -1,5 +1,6 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { useProtection } from '@/hooks/useProtection';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 
@@ -35,6 +36,9 @@ function PageFallback() {
 }
 
 function App() {
+  // Protection anti-copie : bloque clic droit, raccourcis clavier et DevTools
+  useProtection();
+
   return (
     <div className="flex min-h-screen flex-col">
       <ScrollToTop />
