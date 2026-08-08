@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+/* Polices auto-hébergées (meilleure performance qu'un CDN externe).
+   Seuls les sous-ensembles latin + latin étendu sont chargés : le site est
+   en français, inutile d'embarquer cyrillique/grec/vietnamien. */
+@import '@fontsource/manrope/latin-500.css';
+@import '@fontsource/manrope/latin-600.css';
+@import '@fontsource/manrope/latin-700.css';
+@import '@fontsource/manrope/latin-800.css';
+@import '@fontsource/manrope/latin-ext-500.css';
+@import '@fontsource/manrope/latin-ext-600.css';
+@import '@fontsource/manrope/latin-ext-700.css';
+@import '@fontsource/manrope/latin-ext-800.css';
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-500.css';
+@import '@fontsource/inter/latin-600.css';
+@import '@fontsource/inter/latin-ext-400.css';
+@import '@fontsource/inter/latin-ext-500.css';
+@import '@fontsource/inter/latin-ext-600.css';
+@import '@fontsource/ibm-plex-mono/latin-500.css';
+@import '@fontsource/ibm-plex-mono/latin-600.css';
+@import '@fontsource/ibm-plex-mono/latin-ext-500.css';
+@import '@fontsource/ibm-plex-mono/latin-ext-600.css';
+
+@theme {
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Bleu profond — identité institutionnelle */
+  --color-navy-950: #0a1826;
+  --color-navy-900: #0f2436;
+  --color-navy-800: #16324a;
+  --color-navy-700: #1d4159;
+  --color-navy-600: #2c5b78;
+  --color-navy-500: #3f7594;
+
+  /* Orange — issu du logo réel Haubans */
+  --color-accent-100: #fbebd6;
+  --color-accent-200: #f3d2a3;
+  --color-accent-400: #e6a352;
+  --color-accent-500: #dc8a2d;
+  --color-accent-600: #c27423;
+  --color-accent-700: #9c5c1b;
+
+  /* Umber — issu des encarts chiffres et du dos du portfolio */
+  --color-umber-900: #3d2d1f;
+  --color-umber-800: #55402c;
+  --color-umber-700: #6b5238;
+
+  --color-paper: #faf9f6;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+html {
+  scroll-padding-top: 6rem;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-navy-900);
+  background-color: var(--color-paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background-color: var(--color-accent-200);
+  color: var(--color-navy-950);
+}
+
+/* Focus clavier visible et cohérent avec l'identité de marque */
+:focus-visible {
+  outline: 2px solid var(--color-accent-500);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
