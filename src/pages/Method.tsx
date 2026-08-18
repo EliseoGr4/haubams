@@ -34,7 +34,7 @@ export default function Method() {
             alt="Équipe Haubans et médecins de l'Hôpital Général de Douala examinant les plans du service"
             className="h-[420px] w-full object-cover sm:h-[480px]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/10 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-navy-950/80 via-navy-950/10 to-transparent" />
           <Container className="absolute inset-x-0 bottom-0 pb-10">
             <p className="max-w-lg font-display text-lg font-medium leading-snug text-white sm:text-xl">
               Notre bureau d&rsquo;étude interne travaille en lien direct avec les équipes médicales, à
@@ -44,7 +44,7 @@ export default function Method() {
         </div>
       </section>
 
-      <section className="bg-navy-900/[0.02] py-20 sm:py-28">
+      <section className="bg-navy-900/2 py-20 sm:py-28">
         <Container>
           <SectionTitle
             eyebrow="Notre approche"

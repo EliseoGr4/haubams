@@ -13,7 +13,7 @@ export function FeaturedProjects() {
   );
 
   return (
-    <section className="bg-navy-900/[0.02] py-20 sm:py-28">
+    <section className="bg-navy-900/2 py-20 sm:py-28">
       <Container>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionTitle

@@ -56,7 +56,7 @@ export default function Contact() {
                 </li>
               </ul>
 
-              <div className="mt-10 border border-navy-900/10 bg-navy-900/[0.02] p-6">
+              <div className="mt-10 border border-navy-900/10 bg-navy-900/2 p-6">
                 <h3 className="font-display text-sm font-bold text-navy-900">Directions régionales</h3>
                 <p className="mt-2 text-sm leading-relaxed text-navy-700/75">
                   {company.contact.regionalOffices.join(' — ')}, avec une capacité de déploiement dans les 10

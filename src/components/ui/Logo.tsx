@@ -1,33 +1,44 @@
 import { cn } from '@/utils/cn';
 
-interface LogoProps {
-  variant?: 'light' | 'dark';
+export interface LogoProps {
+  /**
+   * 'light' -> pour arrière-plans sombres (navbar transparente sur le hero, footer sombre)
+   * 'dark'  -> pour arrière-plans clairs (navbar au scroll, pages à fond blanc/clair)
+   * 'white' -> version monochrome blanc pur sur fond sombre
+   */
+  variant?: 'light' | 'dark' | 'white';
   className?: string;
-  showTagline?: boolean;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
-/**
- * Logo officiel Haubans — image fournie par le client.
- * Pour changer le logo, remplacez uniquement le fichier
- * /public/images/logo-haubans.jpg
- */
-export function Logo({ variant = 'dark', className, showTagline = true }: LogoProps) {
-  const taglineColor = variant === 'light' ? 'text-white/70' : 'text-navy-700/60';
+export function Logo({ variant = 'dark', className, size = 'md' }: LogoProps) {
+  // Sélection de l'image officielle adaptée au fond
+  const src =
+    variant === 'white'
+      ? '/images/logo-white.png'
+      : variant === 'light'
+      ? '/images/logo-dark.png' // Fond sombre : emblème orange + texte blanc
+      : '/images/logo-light.png'; // Fond clair : emblème orange + texte sombre
+
+  const heightClass = {
+    sm: 'h-9 sm:h-10',
+    md: 'h-11 sm:h-12',
+    lg: 'h-14 sm:h-16',
+    xl: 'h-20 sm:h-24',
+  }[size];
 
   return (
-    <span className={cn('inline-flex items-center gap-2', className)}>
+    <span className={cn('inline-flex items-center', className)}>
       <img
-        src="/images/logo-haubans.jpg"
-        alt="Haubans — Let's Plan the Future"
-        className="h-10 w-auto object-contain"
-        style={{ maxWidth: '180px' }}
+        src={src}
+        alt="Haubans — Let's Plan The Future"
+        className={cn(
+          'w-auto object-contain transition-opacity duration-300',
+          heightClass
+        )}
+        loading="eager"
+        decoding="async"
       />
-      {showTagline === false && null}
-      {showTagline && (
-        <span className={cn('font-mono text-[9px] font-medium uppercase tracking-[0.15em] hidden', taglineColor)}>
-          Let&rsquo;s Plan the Future
-        </span>
-      )}
     </span>
   );
 }

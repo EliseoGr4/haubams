@@ -21,14 +21,14 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         to={`/realisations/${project.slug}`}
         className="group block overflow-hidden border border-navy-900/10 bg-white"
       >
-        <div className="relative aspect-[4/3] overflow-hidden bg-navy-900">
+        <div className="relative aspect-4/3 overflow-hidden bg-navy-900">
           <img
             src={project.coverImage}
             alt={project.title}
             loading="lazy"
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/10 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-navy-950/80 via-navy-950/10 to-transparent" />
           <span className="absolute left-4 top-4 border border-white/30 bg-navy-950/50 px-2.5 py-1 font-mono text-[10px] font-medium uppercase tracking-[0.15em] text-white backdrop-blur-sm">
             {project.category}
           </span>

@@ -25,17 +25,24 @@ export function Hero() {
         role="img"
         aria-label="Couloir de l'Hôpital Général de Douala, rénové par Haubans SARL"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-950/30" />
+      <div className="absolute inset-0 bg-linear-to-t from-navy-950 via-navy-950/70 to-navy-950/30" />
       <div className="absolute inset-0 bg-navy-950/25" />
 
       <Container className="relative pb-24 pt-48 sm:pb-28">
         <motion.div variants={container} initial="hidden" animate="show" className="max-w-3xl">
-          <motion.span
-            variants={item}
-            className="mb-5 inline-block border border-accent-500/40 bg-accent-500/10 px-3 py-1.5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-400"
-          >
-            Ingénierie hospitalière — Cameroun
-          </motion.span>
+          <motion.div variants={item} className="mb-6 flex flex-wrap items-center gap-4">
+            <div className="flex items-center rounded border border-white/15 bg-white/10 px-3.5 py-1.5 backdrop-blur-sm">
+              <img
+                src="/images/logo-dark.png"
+                alt="Haubans — Let's Plan The Future"
+                className="h-24 w-auto object-contain"
+              />
+            </div>
+            <span className="hidden h-5 w-px bg-white/20 sm:inline-block" />
+            <span className="inline-block border border-accent-500/40 bg-accent-500/10 px-3 py-1.5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-400">
+              Ingénierie hospitalière — Cameroun
+            </span>
+          </motion.div>
 
           <motion.h1
             variants={item}

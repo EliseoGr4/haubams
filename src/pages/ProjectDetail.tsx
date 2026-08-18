@@ -37,7 +37,7 @@ export default function ProjectDetail() {
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-navy-950/20" />
+        <div className="absolute inset-0 bg-linear-to-t from-navy-950 via-navy-950/60 to-navy-950/20" />
 
         <Container className="relative pb-14">
           <Link
@@ -133,7 +133,7 @@ export default function ProjectDetail() {
 
       {/* Réalisations liées */}
       {related.length > 0 && (
-        <section className="border-t border-navy-900/10 bg-navy-900/[0.02] py-16 sm:py-20">
+        <section className="border-t border-navy-900/10 bg-navy-900/2 py-16 sm:py-20">
           <Container>
             <h2 className="font-display text-xl font-bold text-navy-900">
               Autres lots du même programme

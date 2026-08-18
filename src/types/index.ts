@@ -106,12 +106,16 @@ export interface NavLink {
   href: string;
   /** true = ancre sur la page d'accueil plutôt que route dédiée */
   isAnchor?: boolean;
+  /** sous-liens pour les dropdowns */
+  children?: Pick<NavLink, 'label' | 'href'>[];
 }
 
 export interface ContactFormData {
   name: string;
   email: string;
   phone: string;
+  /** Qualité / Fonction professionnelle de l'émetteur */
+  quality: string;
   company: string;
   subject: string;
   message: string;
@@ -125,3 +129,55 @@ export interface ContactFormErrors {
 }
 
 export type ContactSubmissionStatus = 'idle' | 'submitting' | 'success' | 'error';
+
+/* ─────────────────────────────────────────
+   NOUVELLES INTERFACES — ajoutées suite aux
+   demandes de Docs.pdf
+───────────────────────────────────────── */
+
+export interface Publication {
+  id: string;
+  title: string;
+  description?: string;
+  date: string; // ISO 8601, ex: "2025-06-01"
+  category?: string;
+  coverImage?: string;
+  /** URL pour consultation en ligne (PDF viewer, etc.) */
+  onlineUrl?: string;
+  /** URL pour téléchargement direct */
+  fileUrl?: string;
+}
+
+export type JobOfferType = 'stage' | 'emploi' | 'opportunite' | 'partenariat';
+
+export interface JobOffer {
+  id: string;
+  title: string;
+  type: JobOfferType;
+  location?: string;
+  description: string;
+  publishedAt: string; // ISO 8601
+  expiresAt?: string;  // ISO 8601
+  applyEmail?: string;
+}
+
+export type NewsCategory = 'actualite' | 'realisation' | 'publication' | 'partenariat' | 'emploi';
+
+export interface NewsItem {
+  id: string;
+  title: string;
+  excerpt: string;
+  category: NewsCategory;
+  publishedAt: string; // ISO 8601
+  coverImage?: string;
+  /** Lien interne ou externe vers le contenu complet */
+  href?: string;
+}
+
+export interface Service {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+  features: string[];
+}

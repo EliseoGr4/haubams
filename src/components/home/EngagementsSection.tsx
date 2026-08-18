@@ -24,7 +24,7 @@ export function EngagementsSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.45, delay: index * 0.08 }}
-                    className="flex items-center gap-4 border border-white/10 bg-white/[0.03] px-5 py-5"
+                    className="flex items-center gap-4 border border-white/10 bg-white/3 px-5 py-5"
                   >
                     <Icon size={22} strokeWidth={1.6} className="shrink-0 text-accent-400" />
                     <span className="font-display text-sm font-semibold text-white">{engagement.title}</span>
@@ -39,7 +39,7 @@ export function EngagementsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col justify-center border border-accent-500/20 bg-accent-500/[0.06] p-10 text-center"
+            className="flex flex-col justify-center border border-accent-500/20 bg-accent-500/6 p-10 text-center"
           >
             <span className="font-mono text-7xl font-bold text-accent-400 sm:text-8xl">{safetyGoal.value}</span>
             <span className="mt-2 font-display text-sm font-bold uppercase tracking-wider text-white">

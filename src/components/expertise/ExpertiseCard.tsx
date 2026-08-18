@@ -48,7 +48,7 @@ export function ExpertiseCard({ expertise, index = 0 }: ExpertiseCardProps) {
       transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
       className="group relative flex flex-col border border-navy-900/10 bg-white p-7 transition-colors duration-300 hover:border-accent-500/60"
     >
-      <div className="flex h-12 w-12 items-center justify-center border border-navy-900/10 bg-navy-900/[0.03] text-navy-800 transition-colors duration-300 group-hover:border-accent-500/40 group-hover:bg-accent-500/10 group-hover:text-accent-600">
+      <div className="flex h-12 w-12 items-center justify-center border border-navy-900/10 bg-navy-900/3 text-navy-800 transition-colors duration-300 group-hover:border-accent-500/40 group-hover:bg-accent-500/10 group-hover:text-accent-600">
         <Icon size={22} strokeWidth={1.75} />
       </div>
 

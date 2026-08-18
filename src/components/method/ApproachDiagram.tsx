@@ -30,7 +30,7 @@ export function ApproachDiagram() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45, delay: index * 0.1 }}
-            className="flex flex-col items-center gap-3 border border-navy-900/10 bg-navy-900/[0.02] px-4 py-6 text-center"
+            className="flex flex-col items-center gap-3 border border-navy-900/10 bg-navy-900/2 px-4 py-6 text-center"
           >
             <pillar.icon size={24} strokeWidth={1.6} className="text-navy-800" />
             <span className="font-display text-sm font-semibold leading-snug text-navy-900">

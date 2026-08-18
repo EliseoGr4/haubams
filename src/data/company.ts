@@ -194,11 +194,19 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const navLinks: NavLink[] = [
-  { label: 'Accueil', href: '/' },
   { label: 'À propos', href: '/a-propos' },
-  { label: 'Nos expertises', href: '/nos-expertises' },
+  {
+    label: 'Nos expertises',
+    href: '/nos-expertises',
+    children: [
+      { label: 'Nos expertises', href: '/nos-expertises' },
+      { label: 'Nos services', href: '/nos-services' },
+      { label: 'Notre méthode', href: '/notre-methode' },
+    ],
+  },
   { label: 'Nos réalisations', href: '/nos-realisations' },
-  { label: 'Notre méthode', href: '/notre-methode' },
   { label: 'Nos engagements', href: '/#engagements', isAnchor: true },
+  { label: 'Publications', href: '/publications' },
+  { label: 'Nous rejoindre', href: '/carrieres' },
   { label: 'Contact', href: '/contact' },
 ];

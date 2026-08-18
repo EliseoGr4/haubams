@@ -260,6 +260,163 @@ export const projects: Project[] = [
       `${IMG}/hero-hopital-general-douala.jpg`,
     ],
   },
+
+  // ────────────────────────────────────────────────────────────────
+  // PROJETS D'ARCHITECTURE INDIVIDUELS — demandés dans Docs.pdf
+  // ────────────────────────────────────────────────────────────────
+  {
+    id: 'pavillon-vip',
+    slug: 'pavillon-vip',
+    title: 'Pavillon VIP — Hôpital Général de Douala',
+    category: 'Architecture',
+    client: 'Hôpital Général de Douala',
+    location: 'Douala, Cameroun',
+    period: '2022 – 2025',
+    summary:
+      "Conception et réalisation d'un pavillon d'hospitalisation VIP offrant un niveau de service hôtelier haut de gamme, dans un environnement hautement sécurisé.",
+    context:
+      "Fort de sa position de premier établissement hospitalier du Cameroun, l'Hôpital Général s'est lancé dans un vaste projet de modernisation de son offre hôtelière, ouvrant aux patients des expériences de soins plus particulières. Le pavillon VIP constitue le projet phare de cette démarche d'excellence.",
+    challenge:
+      "Créer un espace d'hospitalisation haut de gamme intégrant confort, sécurité et efficacité médicale, tout en respectant l'architecture existante du site hospitalier et les exigences réglementaires.",
+    solution:
+      "Conception d'un pavillon dédié au futur service d'hospitalisation VIP, alliant un niveau de finition et de confort hôtelier haut de gamme avec les contraintes d'hygiène, de sécurité et de flexibilité propres au milieu hospitalier. Les espaces ont été pensés pour offrir aux patients une expérience de soin de qualité supérieure.",
+    constraints: [
+      "Respect des normes hospitalières et d'accessibilité PMR",
+      "Continuité des activités médicales pendant les travaux",
+      "Intégration dans le plan directeur de modernisation de l'hôpital",
+    ],
+    results:
+      "Nos solutions privilégient le confort, la flexibilité des espaces, l'innovation et la durabilité, afin d'accompagner l'évolution des besoins de santé tout en renforçant la confiance des patients et des partenaires.",
+    keyStats: [
+      { value: '1300 m²', label: 'de surface de plancher rénovée (programme global)' },
+    ],
+    coverImage: `${IMG}/architecture-chambre-patient.jpg`,
+    images: [
+      `${IMG}/architecture-chambre-patient.jpg`,
+      `${IMG}/architecture-couloir-vitre.jpg`,
+    ],
+  },
+  {
+    id: 'neonatalogie',
+    slug: 'neonatalogie',
+    title: 'Extension de la Néonatalogie — Hôpital Général de Douala',
+    category: 'Architecture',
+    client: 'Hôpital Général de Douala',
+    location: 'Douala, Cameroun',
+    period: '2022 – 2025',
+    summary:
+      "Extension et modernisation du service de néonatalogie, avec la création d'une salle Kangourou pour améliorer le développement des nouveau-nés prématurés.",
+    context:
+      "Le service de néonatalogie de l'Hôpital Général de Douala devait être étendu et modernisé pour répondre à la demande croissante et offrir des conditions de prise en charge optimales aux nouveau-nés vulnérables.",
+    challenge:
+      "Concevoir et réaliser une extension fonctionnelle du service de néonatalogie intégrant une salle Kangourou, en garantissant la continuité de soins et en respectant les normes sanitaires et thermiques propres à cet environnement.",
+    solution:
+      "Extension et modernisation complète du service de néonatalogie avec la création d'une salle Kangourou dédiée, favorisant le contact peau-à-peau entre parents et nouveau-nés prématurés. Les espaces ont été conçus pour répondre aux besoins spécifiques des nourrissons en termes de température, d'hygiène et de confort.",
+    constraints: [
+      "Conditions thermiques et hygrométriques strictes pour les nouveau-nés",
+      "Normes sanitaires et hygiéniques renforcées",
+      "Continuité des soins pendant les travaux",
+    ],
+    results:
+      "La salle Kangourou améliore le développement des prématurés en favorisant le lien parents-enfant, dans un cadre sécurisé et adapté.",
+    keyStats: [
+      { value: '1300 m²', label: 'de surface totale du programme' },
+    ],
+    coverImage: `${IMG}/architecture-couloir-vitre.jpg`,
+    images: [
+      `${IMG}/architecture-couloir-vitre.jpg`,
+      `${IMG}/architecture-chambre-patient.jpg`,
+    ],
+  },
+  {
+    id: 'toilettes-pmr',
+    slug: 'toilettes-pmr',
+    title: 'Modernisation des toilettes des chambres individuelles — Mise aux normes PMR',
+    category: 'Architecture',
+    client: 'Hôpital Général de Douala',
+    location: 'Douala, Cameroun',
+    period: '2022 – 2025',
+    summary:
+      "Modernisation et mise aux normes PMR (Personnes à Mobilité Réduite) des toilettes de 60 chambres individuelles de l'Hôpital Général de Douala.",
+    context:
+      "Dans le cadre du programme de modernisation de son offre hôtelière, l'Hôpital Général de Douala a engagé la mise aux normes d'accessibilité des sanitaires de ses chambres individuelles, pour garantir l'accès et le confort de tous les patients.",
+    challenge:
+      "Moderniser 60 salles de bains dans un hôpital en activité, en respectant les normes PMR et en assurant la continuité de l'accueil des patients.",
+    solution:
+      "Rénovation complète des sanitaires de 60 chambres individuelles, incluant la mise aux normes PMR (dimensions, barres d'appui, douche à l'italienne, revêtements antidérapants), avec un planning de travaux optimisé pour minimiser l'impact sur la capacité d'accueil.",
+    constraints: [
+      "Travaux en site occupé — hôpital en pleine activité",
+      "Respect strict des normes PMR et d'accessibilité",
+      "Planning coordonné pour maintenir la capacité d'accueil",
+    ],
+    keyStats: [
+      { value: '60', label: 'chambres individuelles mises aux normes PMR' },
+    ],
+    coverImage: `${IMG}/genie-civil-finition-sol.jpg`,
+    images: [
+      `${IMG}/genie-civil-finition-sol.jpg`,
+      `${IMG}/genie-civil-percement.jpg`,
+    ],
+  },
+  {
+    id: 'guerite',
+    slug: 'guerite',
+    title: 'Guérite — Poste de contrôle d\'accès',
+    category: 'Architecture',
+    client: 'Hôpital Général de Douala',
+    location: 'Douala, Cameroun',
+    period: 'Depuis 2021',
+    summary:
+      "Conception et réalisation d'un poste de contrôle d'accès (guérite) modernisé pour sécuriser l'entrée du site hospitalier.",
+    context:
+      "La sécurisation des accès constitue un enjeu majeur pour les établissements hospitaliers. L'Hôpital Général de Douala a confié à Haubans la réalisation d'un poste de contrôle d'accès adapté aux flux de visiteurs, patients et personnels.",
+    challenge:
+      "Concevoir un poste de contrôle fonctionnel et esthétiquement cohérent avec l'environnement hospitalier, intégrant des solutions de contrôle d'accès et offrant un espace de travail ergonomique pour le personnel de sécurité.",
+    solution:
+      "Réalisation d'une guérite de contrôle d'accès alliant fonctionnalité et sobriété architecturale, avec des matériaux durables adaptés au contexte tropical, et un aménagement intérieur optimisé pour le confort du personnel en poste.",
+    constraints: [
+      "Continuité des flux d'accès au site hospitalier pendant les travaux",
+      "Intégration architecturale cohérente avec l'existant",
+    ],
+    keyStats: [
+      { value: '2021', label: "début de l'accompagnement du programme de modernisation" },
+    ],
+    coverImage: `${IMG}/hero-hopital-general-douala.jpg`,
+    images: [
+      `${IMG}/hero-hopital-general-douala.jpg`,
+      `${IMG}/genie-civil-percement.jpg`,
+    ],
+  },
+  {
+    id: 'bureau-cobaltotherapie',
+    slug: 'bureau-cobaltotherapie',
+    title: 'Bureau médecins — Service de cobaltothérapie',
+    category: 'Architecture',
+    client: 'Hôpital Général de Douala',
+    location: 'Douala, Cameroun',
+    period: '2022 – 2025',
+    summary:
+      "Aménagement d'un espace bureau dédié aux médecins oncologues du service de cobaltothérapie, adjacent au local du simulateur numérique.",
+    context:
+      "L'installation du premier simulateur numérique de cobaltothérapie au Cameroun a généré un besoin de restructuration des espaces de travail du service d'oncologie. Les médecins nécessitaient un bureau fonctionnel, proche de la salle de contrôle et conforme aux normes de radioprotection.",
+    challenge:
+      "Créer un espace de travail médical conforme aux exigences de radioprotection, garantissant la sécurité du personnel face aux rayonnements ionisants tout en offrant un confort de travail optimal.",
+    solution:
+      "Conception et réalisation d'un bureau médecins intégré au nouveau périmètre du service d'oncologie : aménagement intérieur, cloisons conformes aux normes de radioprotection, systèmes d'aération et de climatisation adaptés, et connectivité pour le suivi des examens médicaux.",
+    constraints: [
+      "Environnement radioactif — normes de radioprotection strictes",
+      "Proximité du simulateur numérique et de la salle de contrôle",
+      "Continuité des activités médicales pendant les travaux",
+    ],
+    keyStats: [
+      { value: '83 m²', label: "d'espaces de travail aménagés dans le service d'oncologie" },
+    ],
+    coverImage: `${IMG}/biomedical-simulateur-technicien.jpg`,
+    images: [
+      `${IMG}/biomedical-simulateur-technicien.jpg`,
+      `${IMG}/biomedical-installation-equipement.jpg`,
+    ],
+  },
 ];
 
 export const projectCategories: Project['category'][] = [

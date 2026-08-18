@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
-import { MapPin, Phone, Globe } from 'lucide-react';
-import { Logo } from '@/components/ui/Logo';
-import { Container } from '@/components/ui/Container';
-import { YoutubeIcon, InstagramIcon, FacebookIcon } from '@/components/ui/BrandIcons';
-import { company, navLinks, socialLinks } from '@/data/company';
-import { expertiseList } from '@/data/expertise';
+﻿import { Link } from "react-router-dom";
+import { MapPin, Phone, Globe, ExternalLink } from "lucide-react";
+import { Logo } from "@/components/ui/Logo";
+import { Container } from "@/components/ui/Container";
+import { YoutubeIcon, InstagramIcon, FacebookIcon } from "@/components/ui/BrandIcons";
+import { company, navLinks, socialLinks } from "@/data/company";
+import { expertiseList } from "@/data/expertise";
 
 const SOCIAL_ICONS = { YouTube: YoutubeIcon, Instagram: InstagramIcon, Facebook: FacebookIcon } as const;
 
@@ -15,8 +15,12 @@ export function Footer() {
     <footer className="bg-navy-950 text-white/70">
       <Container className="py-16">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Colonne 1 — Identité */}
           <div>
             <Logo variant="light" />
+            <p className="mt-1.5 text-xs font-mono uppercase tracking-widest text-accent-400">
+              Ingénierie hospitalière
+            </p>
             <p className="mt-4 text-sm leading-relaxed">
               Bureau d&rsquo;ingénierie hospitalière au Cameroun : conception, réalisation et
               maintenance d&rsquo;infrastructures de santé.
@@ -41,11 +45,17 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Colonne 2 — Navigation */}
           <div>
             <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-white">
               Navigation
             </h3>
             <ul className="mt-5 space-y-3">
+              <li>
+                <Link to="/" className="text-sm transition-colors hover:text-accent-400">
+                  Accueil
+                </Link>
+              </li>
               {navLinks.map((link) => (
                 <li key={link.label}>
                   <Link to={link.href} className="text-sm transition-colors hover:text-accent-400">
@@ -56,6 +66,7 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Colonne 3 — Expertises */}
           <div>
             <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-white">
               Nos expertises
@@ -71,6 +82,7 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Colonne 4 — Coordonnées */}
           <div>
             <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-white">
               Coordonnées
@@ -105,7 +117,26 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+        {/* Groupe Léon Grosse */}
+        <div className="mt-12 border-t border-white/10 pt-8">
+          <p className="mb-4 text-xs font-mono uppercase tracking-widest text-white/40">
+            Les autres sites du Groupe Léon Grosse
+          </p>
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href="https://www.leongrosse.fr"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded border border-white/10 px-3 py-1.5 text-xs font-semibold text-white/60 transition-colors hover:border-accent-500/50 hover:text-accent-400"
+            >
+              Léon Grosse — Construction
+              <ExternalLink size={11} />
+            </a>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {company.legalName} — Tous droits réservés.
           </p>

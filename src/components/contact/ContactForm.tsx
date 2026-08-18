@@ -9,6 +9,7 @@ const EMPTY_FORM: ContactFormData = {
   name: '',
   email: '',
   phone: '',
+  quality: '',
   company: '',
   subject: '',
   message: '',
@@ -121,6 +122,18 @@ export function ContactForm() {
             value={data.phone}
             onChange={handleChange('phone')}
             className={inputClasses}
+          />
+        </Field>
+
+        <Field label="Qualité / Fonction" htmlFor="quality">
+          <input
+            id="quality"
+            type="text"
+            autoComplete="organization-title"
+            value={data.quality}
+            onChange={handleChange('quality')}
+            className={inputClasses}
+            placeholder="Ex. Directeur Technique, DG, Chef de projet..."
           />
         </Field>
 
